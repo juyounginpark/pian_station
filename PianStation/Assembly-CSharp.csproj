@@ -67,17 +67,24 @@
   <ItemGroup>
     <Compile Include="Assets\_Scripts\Player\mapMove.cs" />
     <Compile Include="Assets\_Scripts\Objects\IInteractable.cs" />
-    <Compile Include="Assets\_Scripts\Objects\DialogueManager.cs" />
     <Compile Include="Assets\_Scripts\Objects\inter.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\_Scripts\Player\Dialogue.cs" />
+    <Compile Include="Assets\_Scripts\Player\InteractionManager.cs" />
+    <Compile Include="Assets\_Scripts\Objects\DialogueAction.cs" />
+    <Compile Include="Assets\_Scripts\Objects\afterDialogue\activeAfterDialogue.cs" />
     <Compile Include="Assets\_Scripts\Objects\interactPoint.cs" />
+    <Compile Include="Assets\_Scripts\Objects\afterDialogue\hideAfterDialogue.cs" />
+    <Compile Include="Assets\_Scripts\Objects\toggleSmartPhone.cs" />
     <Compile Include="Assets\_Scripts\Objects\Object1.cs" />
     <Compile Include="Assets\_Scripts\Objects\Object2.cs" />
     <Compile Include="Assets\_Scripts\Player\camera.cs" />
-    <Compile Include="Assets\_Scripts\Objects\InteractableObject.cs" />
+    <Compile Include="Assets\_Scripts\Objects\afterDialogue\moveupAfterDialogue.cs" />
+    <Compile Include="Assets\_Scripts\Objects\invisiblePoint.cs" />
     <Compile Include="Assets\_Scripts\Objects\movePoint.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Fonts\Noto_Sans_KR\OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
@@ -95,6 +102,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Fonts\Noto_Sans_KR\README.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />

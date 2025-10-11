@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private Vector2 moveInput;
+
+    [Header("Interaction")]
     [SerializeField] private float interactionRadius = 1f;
     [SerializeField] private LayerMask interactableLayer;
 
@@ -19,6 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        rb.gravityScale = 0; 
     }
 
     void Update()
@@ -47,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.linearVelocity = moveInput.normalized * moveSpeed;
+        rb.MovePosition(rb.position + moveInput.normalized * moveSpeed * Time.fixedDeltaTime);
     }
 
     void LateUpdate()
@@ -55,30 +58,26 @@ public class PlayerController : MonoBehaviour
         Vector3 clampedPosition = transform.position;
         clampedPosition.y = Mathf.Clamp(clampedPosition.y, minY, maxY);
         clampedPosition.x = Mathf.Clamp(clampedPosition.x, minX, maxX);
-        
         transform.position = clampedPosition;
     }
 
     void Interact()
     {
-        if (interactableLayer.value < 0 || interactableLayer.value >= 32)
-        {
-            return;
-        }
+        if (interactableLayer.value == 0) return;
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, interactionRadius, interactableLayer);
 
-        if (hits.Length == 0)
+        if (hits.Length > 0)
         {
-            return;
-        }
-
-        foreach (Collider2D hit in hits)
-        {
-            IInteractable interactable = hit.GetComponent<IInteractable>();
-            if (interactable != null)
+            Collider2D closestHit = hits[0];
+            
+            if (closestHit.CompareTag("interact"))
             {
-                interactable.Interact();
+                string objectName = closestHit.gameObject.name;
+                
+                IPostDialogueAction[] postActions = closestHit.GetComponents<IPostDialogueAction>();
+                
+                InteractionManager.instance.StartInteraction(objectName, postActions);
             }
         }
     }

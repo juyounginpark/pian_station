@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CameraZoneScroll : MonoBehaviour
 {
-    [SerializeField] private Transform target; // 플레이어 Transform
+    [SerializeField] private Transform target; 
     [SerializeField] private float playerMoveSpeed;
 
     [Header("카메라 트리거 영역 (화면 비율)")]
