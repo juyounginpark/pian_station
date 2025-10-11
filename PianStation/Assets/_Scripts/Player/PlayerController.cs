@@ -9,8 +9,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float interactionRadius = 1f;
     [SerializeField] private LayerMask interactableLayer;
 
-    [SerializeField] private float minY = -5f;
-    [SerializeField] private float maxY = 5f;
+    [Header("Player Move Boundaries")]
+    [SerializeField] private float minY = -0.3f;
+    [SerializeField] private float maxY = 3f;
+    [SerializeField] private float minX = -8f;
+    [SerializeField] private float maxX = 19f;
 
     void Start()
     {
@@ -51,6 +54,8 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 clampedPosition = transform.position;
         clampedPosition.y = Mathf.Clamp(clampedPosition.y, minY, maxY);
+        clampedPosition.x = Mathf.Clamp(clampedPosition.x, minX, maxX);
+        
         transform.position = clampedPosition;
     }
 
