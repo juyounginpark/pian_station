@@ -15,7 +15,7 @@ C:/pian_station/PianStation
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58136
+65207
 -job-worker-count
 9
 -background-job-worker-count
@@ -59,12 +59,12 @@ C:/pian_station/PianStation
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [38232]  Target information:
+Player connection [10560]  Target information:
 
-Player connection [38232]  * "[IP] 192.168.100.7 [Port] 0 [Flags] 2 [Guid] 4069712612 [EditorId] 4069712612 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-7I4VR7K) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [10560]  * "[IP] 192.168.100.7 [Port] 0 [Flags] 2 [Guid] 3041223924 [EditorId] 3041223924 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-7I4VR7K) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [38232] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [38232] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [10560] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [10560] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 9
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -76,7 +76,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 2.32 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.92 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.40f1 (157d81624ddf)
 [Subsystems] Discovering subsystems at path D:/Unity Hub/6000.0.40f1/Editor/Data/Resources/UnitySubsystems
@@ -92,43 +92,43 @@ Initialize mono
 Mono path[0] = 'D:/Unity Hub/6000.0.40f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity Hub/6000.0.40f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Unity Hub/6000.0.40f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56996
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56136
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity Hub/6000.0.40f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001531 seconds.
-- Loaded All Assemblies, in  0.379 seconds
+Registered in 0.001306 seconds.
+- Loaded All Assemblies, in  0.227 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.293 seconds
-Domain Reload Profiling: 672ms
-	BeginReloadAssembly (143ms)
+- Finished resetting the current domain, in  0.190 seconds
+Domain Reload Profiling: 417ms
+	BeginReloadAssembly (84ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (32ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (38ms)
-	LoadAllAssembliesAndSetupDomain (155ms)
-		LoadAssemblies (143ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (89ms)
+		LoadAssemblies (84ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (152ms)
-			TypeCache.Refresh (150ms)
-				TypeCache.ScanAssembly (137ms)
+		AnalyzeDomain (87ms)
+			TypeCache.Refresh (85ms)
+				TypeCache.ScanAssembly (77ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (293ms)
+	FinalizeReload (190ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (264ms)
+		SetupLoadedEditorAssemblies (164ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (23ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (48ms)
-			ProcessInitializeOnLoadAttributes (130ms)
-			ProcessInitializeOnLoadMethodAttributes (59ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (30ms)
+			ProcessInitializeOnLoadAttributes (87ms)
+			ProcessInitializeOnLoadMethodAttributes (30ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -137,208 +137,96 @@ Domain Reload Profiling: 672ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.818 seconds
-Refreshing native plugins compatible for Editor in 2.75 ms, found 4 plugins.
+- Loaded All Assemblies, in  0.499 seconds
+Refreshing native plugins compatible for Editor in 1.40 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.946 seconds
-Domain Reload Profiling: 1758ms
-	BeginReloadAssembly (158ms)
+- Finished resetting the current domain, in  0.445 seconds
+Domain Reload Profiling: 940ms
+	BeginReloadAssembly (105ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (24ms)
-	RebuildCommonClasses (44ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (36ms)
-	LoadAllAssembliesAndSetupDomain (560ms)
-		LoadAssemblies (393ms)
+		CreateAndSetChildDomain (18ms)
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (341ms)
+		LoadAssemblies (257ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (269ms)
-			TypeCache.Refresh (193ms)
-				TypeCache.ScanAssembly (177ms)
-			BuildScriptInfoCaches (59ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (947ms)
+		AnalyzeDomain (149ms)
+			TypeCache.Refresh (110ms)
+				TypeCache.ScanAssembly (100ms)
+			BuildScriptInfoCaches (31ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (445ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (779ms)
+		SetupLoadedEditorAssemblies (358ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (168ms)
-			ProcessInitializeOnLoadAttributes (446ms)
-			ProcessInitializeOnLoadMethodAttributes (155ms)
-			AfterProcessingInitializeOnLoad (3ms)
+			InitializePlatformSupportModulesInManaged (1ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (70ms)
+			ProcessInitializeOnLoadAttributes (218ms)
+			ProcessInitializeOnLoadMethodAttributes (64ms)
+			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 2.45 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.53 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 220 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6670 unused Assets / (4.1 MB). Loaded Objects now: 7382.
-Memory consumption went from 186.7 MB to 182.7 MB.
-Total: 7.597700 ms (FindLiveObjects: 0.600400 ms CreateObjectMapping: 0.530400 ms MarkObjects: 4.326500 ms  DeleteObjects: 2.139100 ms)
+Unloading 6670 unused Assets / (4.6 MB). Loaded Objects now: 7382.
+Memory consumption went from 186.8 MB to 182.2 MB.
+Total: 6.681000 ms (FindLiveObjects: 0.639900 ms CreateObjectMapping: 0.746600 ms MarkObjects: 3.086400 ms  DeleteObjects: 2.206600 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 13833.802580 seconds.
-  path: Assets/objects/background/background_2.asset
-  artifactKey: Guid(29cbece51e510ee49a025cd97ad650ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/background_2.asset using Guid(29cbece51e510ee49a025cd97ad650ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8fb25a53bd4b46e75df4b528d1db03cf') in 0.1797719 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 20260.451141 seconds.
+  path: Assets/objects/background/big_poster.png
+  artifactKey: Guid(628a7a6b364356a48895cce447a67c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/objects/background/big_poster.png using Guid(628a7a6b364356a48895cce447a67c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '560bd38aff9b8b2182ac3c1ff456e80e') in 0.0816409 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/objects/background/background_15.asset
-  artifactKey: Guid(e9866456eb64ee24b8ca4e3a21abb832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/background_15.asset using Guid(e9866456eb64ee24b8ca4e3a21abb832) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '927d29f259366bfd1bd754014db5967c') in 0.0885752 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 33.464424 seconds.
+  path: Assets/objects/background/big_poster.png
+  artifactKey: Guid(628a7a6b364356a48895cce447a67c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/objects/background/big_poster.png using Guid(628a7a6b364356a48895cce447a67c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9e2da72950cf0ea407d690681a44d8d9') in 0.0377204 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.009659 seconds.
-  path: Assets/objects/background/background_6.asset
-  artifactKey: Guid(f37418b3d51de6a438ad8cb7e3bfa3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/background_6.asset using Guid(f37418b3d51de6a438ad8cb7e3bfa3d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a0d7d0e5170a25b8614d48431bb07f1c') in 0.0146766 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 53.351414 seconds.
+  path: Assets/objects/background/poster.png
+  artifactKey: Guid(6178bda010948c947ba08bf1f9f373bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/objects/background/poster.png using Guid(6178bda010948c947ba08bf1f9f373bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd0eb2b6bfaa9b4e032ec6734cd8b15cf') in 0.0097496 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/objects/background/normal_vending.png
-  artifactKey: Guid(f1ffe9783883d5d4d924618b2eb0cfee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/normal_vending.png using Guid(f1ffe9783883d5d4d924618b2eb0cfee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b98b835d4d3700c014b30614f320939a') in 0.0360039 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 56.727238 seconds.
+  path: Assets/objects/background/poster.png
+  artifactKey: Guid(6178bda010948c947ba08bf1f9f373bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/objects/background/poster.png using Guid(6178bda010948c947ba08bf1f9f373bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8b0c14afc6aef96342068870f62e4008') in 0.0102884 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/objects/background/background_11.asset
-  artifactKey: Guid(1daf2b2386c5ed048b5c06cd8c66da2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/background_11.asset using Guid(1daf2b2386c5ed048b5c06cd8c66da2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bec09ef786edd0c7659eaf29ba426bff') in 0.0074779 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 50.336704 seconds.
+  path: Assets/objects/background/poster.png
+  artifactKey: Guid(6178bda010948c947ba08bf1f9f373bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/objects/background/poster.png using Guid(6178bda010948c947ba08bf1f9f373bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '82ba8d6fb5b74c17786baf601918b3f4') in 0.0113527 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/objects/background/memo.png
-  artifactKey: Guid(4047822047606fe418e34ade89aecb50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/memo.png using Guid(4047822047606fe418e34ade89aecb50) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e562b2cbfe9a99f8c2cf21f26450d289') in 0.0096147 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/objects/interactPoint.png
-  artifactKey: Guid(eeea084fe30d81546aed9cd44abe16f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/interactPoint.png using Guid(eeea084fe30d81546aed9cd44abe16f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5421e50011bfa22bdba6a4c435852ecc') in 0.0128594 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/objects/background/background_10.asset
-  artifactKey: Guid(b1518792657b90d469931709770230d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/background_10.asset using Guid(b1518792657b90d469931709770230d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'edb44d49ce9f5e950ae23ace71e0a531') in 0.0061445 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/objects/background/bench.png
-  artifactKey: Guid(f817f552234b4b94fac99cdf3e9f024c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/bench.png using Guid(f817f552234b4b94fac99cdf3e9f024c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '27a09e7ce18d3ccf9c3b89ecc1de4f5b') in 0.0127938 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/objects/background/background_0.asset
-  artifactKey: Guid(feb78c9838ae8e648919a22786ae722e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/background_0.asset using Guid(feb78c9838ae8e648919a22786ae722e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f726af9d35263efbc4d74bcf409b45ed') in 0.0043645 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/objects/background/background_8.asset
-  artifactKey: Guid(ea0939cf6b7f99a4d8e219dd8af4d534) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/background_8.asset using Guid(ea0939cf6b7f99a4d8e219dd8af4d534) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '46c341b1eb72d3db7b767d280b4da0b6') in 0.0089271 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/objects/background/background_1.asset
-  artifactKey: Guid(0379b3d4136073e4a8d7587332befa38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/background_1.asset using Guid(0379b3d4136073e4a8d7587332befa38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1eb53af61b8095bfb3c025638d35684c') in 0.0043504 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/objects/background/background_12.asset
-  artifactKey: Guid(e117bc8a4bbded64b8e1fe9c0c101375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/background_12.asset using Guid(e117bc8a4bbded64b8e1fe9c0c101375) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '298d9062c88e143dc8bf6c686248543e') in 0.0068309 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/objects/background/battery.png
-  artifactKey: Guid(71ed020f9ad2adb4facc39dd0b9e83d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/battery.png using Guid(71ed020f9ad2adb4facc39dd0b9e83d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c26d86bc61d9e3f034f2b69785ec2207') in 0.0085854 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/objects/background/background_14.asset
-  artifactKey: Guid(6403f3678084fff4eaeb6fbc9adc2f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/background_14.asset using Guid(6403f3678084fff4eaeb6fbc9adc2f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e0c01a24aa5d9aef24b4a2c3651cf4d1') in 0.0781585 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/objects/background/background_16.asset
-  artifactKey: Guid(bed7114fdcff7fd4291851de0613206a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/background_16.asset using Guid(bed7114fdcff7fd4291851de0613206a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '43c1481948b84b9cc23501d1ba0a2a06') in 0.0074255 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/objects/background/background_3.asset
-  artifactKey: Guid(21fcb1941a1d0ee47bbea512d6014ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/background_3.asset using Guid(21fcb1941a1d0ee47bbea512d6014ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8ed3a1258333fd4a827f74d5b76e8606') in 0.0080168 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/objects/background/background_5.asset
-  artifactKey: Guid(1f0280408f7dcab4e9aea2f56142afc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/background_5.asset using Guid(1f0280408f7dcab4e9aea2f56142afc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00d7619fa7cfe25a3a759bf7cb954d25') in 0.0100686 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/objects/background/background_9.asset
-  artifactKey: Guid(3637cbac4e645e2429ea6d17c2a851e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/background_9.asset using Guid(3637cbac4e645e2429ea6d17c2a851e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2ab17b1c801ae6c88ea175f695087257') in 0.0052509 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/objects/background/background_4.asset
-  artifactKey: Guid(127fada59632c734692c9229181f4678) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/objects/background/background_4.asset using Guid(127fada59632c734692c9229181f4678) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cfab90e95770cc3fa75b1e0a79535c0b') in 0.008638 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 42.897757 seconds.
+  path: Assets/objects/background/poster.png
+  artifactKey: Guid(6178bda010948c947ba08bf1f9f373bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/objects/background/poster.png using Guid(6178bda010948c947ba08bf1f9f373bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7c3afffdfe87d6ce58fc19d2a3be5333') in 0.0385286 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
 
