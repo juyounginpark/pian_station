@@ -5,9 +5,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Animator animator;
-    private float moveInput;
+    private Vector2 moveInput;
     [SerializeField] private float interactionRadius = 1f;
     [SerializeField] private LayerMask interactableLayer;
+
+    [SerializeField] private float minY = -5f;
+    [SerializeField] private float maxY = 5f;
 
     void Start()
     {
@@ -17,12 +20,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        moveInput = Input.GetAxisRaw("Horizontal");
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.y = Input.GetAxisRaw("Vertical");
 
-        if (moveInput != 0)
+        if (moveInput.sqrMagnitude > 0)
         {
             animator.SetBool("isWalking", true);
-            transform.localScale = new Vector3(moveInput > 0 ? 1f : -1f, 1f, 1f);
+            if (moveInput.x != 0)
+            {
+                transform.localScale = new Vector3(moveInput.x > 0 ? 1f : -1f, 1f, 1f);
+            }
         }
         else
         {
@@ -37,7 +44,14 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+        rb.linearVelocity = moveInput.normalized * moveSpeed;
+    }
+
+    void LateUpdate()
+    {
+        Vector3 clampedPosition = transform.position;
+        clampedPosition.y = Mathf.Clamp(clampedPosition.y, minY, maxY);
+        transform.position = clampedPosition;
     }
 
     void Interact()
@@ -63,5 +77,4 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
 }
