@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 628a7a6b364356a48895cce447a67c7e
+guid: 7b740f5454bd07a40b867a0be8822832
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7060666267081466602
-    second: big_poster_0
-  - first:
-      213: 6627349213031904583
-    second: big_poster_1
+      213: 8282619954950462705
+    second: open_memo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,45 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: big_poster_0
+      name: open_memo_0
       rect:
         serializedVersion: 2
-        x: 177
-        y: 109
-        width: 1703
-        height: 847
+        x: 11
+        y: 10
+        width: 946
+        height: 1014
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 61d96096079730e90800000000000000
-      internalID: -7060666267081466602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: big_poster_1
-      rect:
-        serializedVersion: 2
-        x: 146
-        y: 111
-        width: 1736
-        height: 866
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7453b3dfef219fb50800000000000000
-      internalID: 6627349213031904583
+      spriteID: 1fc526047f6c1f270800000000000000
+      internalID: 8282619954950462705
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4757b6c651096c34597ba6a47b5ba0fb
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -159,9 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      big_poster_0: -7060666267081466602
-      big_poster_1: 6627349213031904583
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
