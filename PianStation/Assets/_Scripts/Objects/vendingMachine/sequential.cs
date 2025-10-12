@@ -4,17 +4,20 @@ using System.Collections;
 public class SequentialUIManager : MonoBehaviour, IPostDialogueAction
 {
     [Header("UI 연결")]
-    [Tooltip("첫 번째 상호작용 시에만 나타나는 UI (사라지지 않음)")]
+    [Tooltip("첫 번째 상호작용 시에만 나타나는 UI")]
     [SerializeField] private GameObject firstInteractionUI;
 
-    [Tooltip("2회차부터 반복적으로 나타나는 UI (자동/수동으로 사라짐)")]
+    [Tooltip("2회차부터 반복적으로 나타나는 UI")]
     [SerializeField] private GameObject repeatingInteractionUI;
 
     [Tooltip("마지막 상호작용 시 나타나는 UI")]
     [SerializeField] private GameObject finalInteractionUI;
 
+    [Tooltip("마지막 UI가 닫힌 후 영구적으로 나타날 UI")]
+    [SerializeField] private GameObject permanentUI_afterFinal;
+
     [Header("설정")]
-    [Tooltip("마지막 UI가 나타날 상호작용 횟수 (예: 5로 설정하면 5번째에 마지막 UI 출력)")]
+    [Tooltip("마지막 UI가 나타날 상호작용 횟수")]
     [SerializeField] private int finalInteractionCount = 5;
 
     [Tooltip("반복 UI가 자동으로 사라지기까지 걸리는 시간(초)")]
@@ -26,23 +29,18 @@ public class SequentialUIManager : MonoBehaviour, IPostDialogueAction
     private int currentInteractionCount = 0;
     private Coroutine autoCloseCoroutine;
 
-    // --- 여기가 수정된 핵심 부분 ---
     void Update()
     {
-        // 스페이스바를 눌렀을 때
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            // 1. 첫 번째 UI가 활성화되어 있다면 첫 번째 UI를 닫는다.
             if (firstInteractionUI != null && firstInteractionUI.activeSelf)
             {
                 CloseFirstUI();
             }
-            // 2. 반복 UI가 활성화되어 있다면 반복 UI를 닫는다.
             else if (repeatingInteractionUI != null && repeatingInteractionUI.activeSelf)
             {
                 CloseRepeatingUI();
             }
-            // 3. 마지막 UI가 활성화되어 있다면 마지막 UI를 닫는다.
             else if (finalInteractionUI != null && finalInteractionUI.activeSelf)
             {
                 CloseFinalUI();
@@ -111,6 +109,12 @@ public class SequentialUIManager : MonoBehaviour, IPostDialogueAction
         if (finalInteractionUI != null && finalInteractionUI.activeSelf)
         {
             finalInteractionUI.SetActive(false);
+
+            if (permanentUI_afterFinal != null)
+            {
+                permanentUI_afterFinal.SetActive(true);
+            }
+
             if (playerController != null) playerController.enabled = true;
         }
     }
