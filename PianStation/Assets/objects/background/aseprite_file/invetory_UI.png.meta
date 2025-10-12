@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d3f2a32f9d32c25418b379c077971a68
+guid: 8bcb5d27bcb1ce943ad7a6d5dbb854f1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5785282684329835063
-    second: interactionUI_0
+      213: 821379011272909422
+    second: invetory_UI_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: interactionUI_0
+      name: invetory_UI_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1560
-        height: 177
+        width: 640
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 73ab2bc13f3794050800000000000000
-      internalID: 5785282684329835063
+      spriteID: e6222e0ebdf166b00800000000000000
+      internalID: 821379011272909422
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      interactionUI_0: 5785282684329835063
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
