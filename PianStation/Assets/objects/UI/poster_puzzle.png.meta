@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d6a3d784e88998a4f8d989fbb92f9680
+guid: 7f56ea9f0b1d0b846acd67c978e71790
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -119,10 +119,10 @@ TextureImporter:
       name: big_poster_1
       rect:
         serializedVersion: 2
-        x: 174
-        y: 112
-        width: 1707
-        height: 856
+        x: 165
+        y: 671
+        width: 487
+        height: 283
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,6 +133,72 @@ TextureImporter:
       bones: []
       spriteID: 7453b3dfef219fb50800000000000000
       internalID: 6627349213031904583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poster_puzzle_0
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 369
+        width: 399
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc2867a128c63541be5e38a6ccaf877
+      internalID: -160075623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poster_puzzle_1
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 235
+        width: 507
+        height: 652
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96f214973993954f94213a5216c29fa
+      internalID: -1257949422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poster_puzzle_2
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 98
+        width: 581
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a780a806ab4cc634e99a533964a76ff7
+      internalID: 63549112
       vertices: []
       indices: 
       edges: []
@@ -153,6 +219,9 @@ TextureImporter:
     nameFileIdTable:
       big_poster_0: -7060666267081466602
       big_poster_1: 6627349213031904583
+      poster_puzzle_0: -160075623
+      poster_puzzle_1: -1257949422
+      poster_puzzle_2: 63549112
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
