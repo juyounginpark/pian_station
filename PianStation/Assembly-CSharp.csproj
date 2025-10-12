@@ -68,15 +68,18 @@
     <Compile Include="Assets\_YK\_Scripts\BlinkLight.cs" />
     <Compile Include="Assets\_Scripts\Objects\IInteractable.cs" />
     <Compile Include="Assets\_YK\_Scripts\QuitGame.cs" />
+    <Compile Include="Assets\Phone_20251012\Scripts\TogglePhone.cs" />
     <Compile Include="Assets\_YK\_Scripts\CameraShaking.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\_YK\_Scripts\PlayAnimation.cs" />
     <Compile Include="Assets\_YK\_Scripts\BlinkObject.cs" />
     <Compile Include="Assets\_YK\_Scripts\ActiveAfterDelay.cs" />
+    <Compile Include="Assets\Phone_20251012\Scripts\PhoneCall.cs" />
     <Compile Include="Assets\_Scripts\Objects\Object1.cs" />
     <Compile Include="Assets\_Scripts\Objects\Object2.cs" />
     <Compile Include="Assets\_YK\_Scripts\TypeTextTMP.cs" />
     <Compile Include="Assets\_YK\_Scripts\FadeController.cs" />
+    <Compile Include="Assets\Phone_20251012\Scripts\PanelAnimation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
