@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isWalking", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+         if (Input.GetKeyDown(KeyCode.E) && InteractionManager.instance != null && !InteractionManager.instance.IsDialogueActive)
         {
             Interact();
         }

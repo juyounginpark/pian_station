@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 
-// DialogueMapping 클래스는 변경 없음
 [System.Serializable]
 public class DialogueMapping
 {
@@ -13,6 +12,7 @@ public class DialogueMapping
 
 public class InteractionManager : MonoBehaviour
 {
+    public bool IsDialogueActive => dialoguePanel.activeSelf;
     public static InteractionManager instance;
 
     [Header("UI 연결")]
@@ -30,9 +30,6 @@ public class InteractionManager : MonoBehaviour
 
     private Queue<string> sentences;
     private Coroutine typingCoroutine;
-    
-    // --- 수정된 부분 ---
-    // 단일 액션 변수에서 액션 '배열' 변수로 변경
     private IPostDialogueAction[] currentPostActions;
 
     void Awake()
@@ -69,11 +66,9 @@ public class InteractionManager : MonoBehaviour
         }
     }
     
-    // --- 수정된 부분 ---
-    // 매개변수가 단일 액션에서 액션 '배열'로 변경
     public void StartInteraction(string objectName, IPostDialogueAction[] actions)
     {
-        currentPostActions = actions; // 전달받은 액션 배열을 저장
+        currentPostActions = actions;
 
         if (dialogueDictionary.TryGetValue(objectName, out Dialogue dialogue))
         {
@@ -139,6 +134,6 @@ public class InteractionManager : MonoBehaviour
                 action.OnDialogueEnd();
             }
         }
-        currentPostActions = null; // 실행 후에는 변수를 비움
+        currentPostActions = null;
     }
 }
