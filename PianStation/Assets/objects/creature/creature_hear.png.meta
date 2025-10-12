@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      creature_hear_0: -6639518107346213401
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
