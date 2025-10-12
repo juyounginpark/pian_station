@@ -11,7 +11,7 @@ public class ShowUIAfterDialogue : MonoBehaviour, IPostDialogueAction
     [SerializeField] private PlayerController playerController;
 
     [Tooltip("UI가 자동으로 사라지기까지 걸리는 시간(초)")]
-    [SerializeField] private float autoCloseDelay = 5f;
+    [SerializeField] private float autoCloseDelay = 1f;
 
     private Coroutine autoCloseCoroutine;
 
