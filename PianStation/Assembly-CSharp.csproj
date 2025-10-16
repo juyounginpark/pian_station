@@ -63,6 +63,8 @@
   <ItemGroup>
     <Compile Include="Assets\_YK\_Scripts\BlinkLight.cs" />
     <Compile Include="Assets\_Scripts\Player\mapMove.cs" />
+    <Compile Include="Assets\_ES\ES_Scripts\PosterPuzzleUI.cs" />
+    <Compile Include="Assets\_ES\ES_Scripts\TapeButton.cs" />
     <Compile Include="Assets\_Scripts\Objects\IInteractable.cs" />
     <Compile Include="Assets\_YK\_Scripts\QuitGame.cs" />
     <Compile Include="Assets\_Scripts\Objects\train\strangeTrain.cs" />
@@ -75,6 +77,7 @@
     <Compile Include="Assets\_YK\_Scripts\BlinkObject.cs" />
     <Compile Include="Assets\_Scripts\Objects\DialogueAction.cs" />
     <Compile Include="Assets\_Scripts\Objects\afterDialogue\activeAfterDialogue.cs" />
+    <Compile Include="Assets\_ES\ES_Scripts\OpenAreaButton.cs" />
     <Compile Include="Assets\_Scripts\Objects\interactPoint.cs" />
     <Compile Include="Assets\_YK\_Scripts\ActiveAfterDelay.cs" />
     <Compile Include="Assets\_Scripts\Objects\afterDialogue\hideAfterDialogue.cs" />
@@ -82,6 +85,7 @@
     <Compile Include="Assets\_Scripts\Objects\Object1.cs" />
     <Compile Include="Assets\_Scripts\Objects\vendingMachine\sequential.cs" />
     <Compile Include="Assets\_Scripts\Objects\Object2.cs" />
+    <Compile Include="Assets\_ES\ES_Scripts\PostController.cs" />
     <Compile Include="Assets\_Scripts\Player\camera.cs" />
     <Compile Include="Assets\_Scripts\Objects\afterDialogue\moveupAfterDialogue.cs" />
     <Compile Include="Assets\_YK\_Scripts\TypeTextTMP.cs" />
