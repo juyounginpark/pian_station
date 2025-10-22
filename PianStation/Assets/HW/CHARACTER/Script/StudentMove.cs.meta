@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 702456040f200ff4f8888889ef7ed787
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241006
+  packageName: East Asia Female Student
+  packageVersion: 1.1
+  assetPath: Assets/EastAsiaStudent/Scripts/StudentMove.cs
+  uploadId: 634606
