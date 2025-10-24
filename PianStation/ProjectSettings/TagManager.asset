@@ -48,6 +48,9 @@ TagManager:
   - name: floor
     uniqueID: 2744762655
     locked: 0
+  - name: railroad
+    uniqueID: 3374229949
+    locked: 0
   - name: object
     uniqueID: 2652005775
     locked: 0
