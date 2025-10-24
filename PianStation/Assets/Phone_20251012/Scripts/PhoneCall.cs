@@ -1,6 +1,6 @@
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
+using TMPro;
 
 public class PhoneCall : MonoBehaviour
 {
@@ -10,7 +10,7 @@ public class PhoneCall : MonoBehaviour
     [SerializeField] private Button callButton;
     [SerializeField] private GameObject callPanel; // Panel to show on call
     [SerializeField] private TextMeshProUGUI callDisplayText; // TMP field for dialed number
-
+    [SerializeField] private GameObject Dialogue;
     private string phoneNumber = "";
 
     void Start()
@@ -57,6 +57,12 @@ public class PhoneCall : MonoBehaviour
 
         Debug.Log($"Calling: {phoneNumber}");
 
+        // Check for special number
+        if (phoneNumber == "16778338")
+        {
+            OnSpecialNumberCalled();
+        }
+
         // Show the call panel and update the call display text
         if (callPanel != null)
         {
@@ -71,5 +77,10 @@ public class PhoneCall : MonoBehaviour
     void UpdateDisplay()
     {
         displayText.text = phoneNumber;
+    }
+
+    void OnSpecialNumberCalled()
+    {
+        Dialogue.SetActive(true);
     }
 }
