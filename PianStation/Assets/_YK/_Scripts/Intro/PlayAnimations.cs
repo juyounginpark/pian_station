@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayAnimationOnClick : MonoBehaviour
+public class PlayAnimations : MonoBehaviour
 {
     [SerializeField] private Button targetButton;
     [SerializeField] private Animator targetAnimator;

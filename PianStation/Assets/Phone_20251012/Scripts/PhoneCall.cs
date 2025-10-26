@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class PhoneCall : MonoBehaviour
 {
@@ -81,6 +82,12 @@ public class PhoneCall : MonoBehaviour
 
     void OnSpecialNumberCalled()
     {
-        Dialogue.SetActive(true);
+        StartCoroutine(ActivateAfterThreeSeconds());
+    }
+    
+    private IEnumerator ActivateAfterThreeSeconds()
+    {
+        yield return new WaitForSeconds(3f); // 3초 대기
+        Dialogue.SetActive(true); // 활성화
     }
 }

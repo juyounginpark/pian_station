@@ -1,7 +1,7 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
-public class MoveUpAfterDialogue : MonoBehaviour, IPostDialogueAction
+public class Bench : MonoBehaviour, IInteractable
 {
     [Header("움직임 설정")]
     [SerializeField] private float moveDistance = 2f;
@@ -12,11 +12,11 @@ public class MoveUpAfterDialogue : MonoBehaviour, IPostDialogueAction
     [SerializeField] private GameObject targetObjectForTagChange;
 
     private bool hasActionBeenPerformed = false;
+    public GameObject Dialogue;
     private InteractableIndicator indicator;
-
-    private void Awake()
+    public void StartMoveBench()
     {
-        indicator = GetComponent<InteractableIndicator>();
+        StartCoroutine(MoveUpCoroutine());
     }
 
     public void SetTagTointeract()
@@ -24,22 +24,7 @@ public class MoveUpAfterDialogue : MonoBehaviour, IPostDialogueAction
         gameObject.tag = "interact";
     }
 
-    public void OnDialogueEnd()
-    {
-        if (!hasActionBeenPerformed)
-        {
-            hasActionBeenPerformed = true;
-            
-            if (indicator != null)
-            {
-                indicator.HideIndicator();
-            }
-
-            StartCoroutine(MoveUpCoroutine());
-        }
-    }
-
-    private IEnumerator MoveUpCoroutine()
+    public IEnumerator MoveUpCoroutine()
     {
         Vector3 initialPosition = transform.position;
         Vector3 targetPosition = initialPosition + new Vector3(0, moveDistance, 0);
@@ -54,12 +39,19 @@ public class MoveUpAfterDialogue : MonoBehaviour, IPostDialogueAction
 
         transform.position = targetPosition;
         
-        gameObject.layer = LayerMask.NameToLayer("PostInteract");
+//        gameObject.layer = LayerMask.NameToLayer("PostInteract");
         
         if (targetObjectForTagChange != null)
         {
             targetObjectForTagChange.tag = "interact";
             Debug.Log($"'{targetObjectForTagChange.name}' 오브젝트의 태그를 'interact'로 변경했습니다.");
         }
+    }
+
+
+    public void Interact()
+    {
+        Dialogue.SetActive(true);
+        gameObject.tag = "Untagged";
     }
 }
