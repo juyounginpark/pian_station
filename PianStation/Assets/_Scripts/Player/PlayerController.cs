@@ -6,12 +6,12 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private Vector2 moveInput;
+    private Vector3 originalVisualScale;
 
     [Header("Interaction")]
     [SerializeField] private float interactionRadius = 1f;
     [SerializeField] private LayerMask interactableLayer;
     
-    // --- 여기가 추가된 부분 ---
     [Header("Visuals")]
     [Tooltip("캐릭터의 스프라이트와 애니메이터가 있는 자식 오브젝트의 Transform")]
     [SerializeField] private Transform visualsTransform;
@@ -25,10 +25,14 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        // 애니메이터는 이제 자식 오브젝트에 있으므로, 자식에서 찾아옵니다.
         animator = visualsTransform.GetComponent<Animator>(); 
         rb.gravityScale = 0;
         rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+
+        if (visualsTransform != null)
+        {
+            originalVisualScale = visualsTransform.localScale;
+        }
     }
 
     void Update()
@@ -41,9 +45,11 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isWalking", true);
             if (moveInput.x != 0)
             {
-                // --- 여기가 수정된 부분 ---
-                // 자기 자신(transform) 대신 visualsTransform을 뒤집습니다.
-                visualsTransform.localScale = new Vector3(moveInput.x > 0 ? 1f : -1f, 1f, 1f);
+                visualsTransform.localScale = new Vector3(
+                    moveInput.x > 0 ? Mathf.Abs(originalVisualScale.x) : -Mathf.Abs(originalVisualScale.x),
+                    originalVisualScale.y,
+                    originalVisualScale.z
+                );
             }
         }
         else
@@ -57,7 +63,6 @@ public class PlayerController : MonoBehaviour
         }
     }
     
-    // ... (FixedUpdate, LateUpdate, Interact 함수는 기존과 동일) ...
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveInput.normalized * moveSpeed * Time.fixedDeltaTime);
