@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 06314d1b9c628e2489f44eb10b9f6b48
+guid: 78309b939d666954da9c997c3ab93a81
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4693604186653510602
-    second: Creature_walking5_0
+      213: -492319307658865147
+    second: Creature_walking6_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,11 +100,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Creature_walking5_0
+      name: Creature_walking6_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
+        y: 3
         width: 63
         height: 57
       alignment: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6343b3a2cd7fcdeb0800000000000000
-      internalID: -4693604186653510602
+      spriteID: 5065de6b23eea29f0800000000000000
+      internalID: -492319307658865147
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Creature_walking5_0: -4693604186653510602
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

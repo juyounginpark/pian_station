@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - interact
+  - creature
+  - main
+  - train
   layers:
   - Default
   - TransparentFX
@@ -59,6 +62,12 @@ TagManager:
     locked: 0
   - name: main
     uniqueID: 1999054907
+    locked: 0
+  - name: Creature
+    uniqueID: 2951294045
+    locked: 0
+  - name: train
+    uniqueID: 1408757321
     locked: 0
   - name: UI
     uniqueID: 325790603

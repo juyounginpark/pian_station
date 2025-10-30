@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 06314d1b9c628e2489f44eb10b9f6b48
+guid: decbf50d71af9054a8b1803770393aef
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Creature_walking5_0: -4693604186653510602
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
