@@ -72,6 +72,7 @@
     <Compile Include="Assets\Phone_20251012\Scripts\TogglePhone.cs" />
     <Compile Include="Assets\_Scripts\Objects\train\strangeTrain.cs" />
     <Compile Include="Assets\creature_logic\scripts\CreatureChase.cs" />
+    <Compile Include="Assets\EastAsiaStudent\Scripts\StudentMove.cs" />
     <Compile Include="Assets\_YK\_Scripts\CameraShaking.cs" />
     <Compile Include="Assets\_Scripts\Objects\inter.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerController.cs" />
@@ -93,7 +94,6 @@
     <Compile Include="Assets\_Scripts\Player\camera.cs" />
     <Compile Include="Assets\_Scripts\Objects\afterDialogue\moveupAfterDialogue.cs" />
     <Compile Include="Assets\_YK\_Scripts\TypeTextTMP.cs" />
-    <Compile Include="Assets\HW\CHARACTER\Script\StudentMove.cs" />
     <Compile Include="Assets\_Scripts\Objects\invisiblePoint.cs" />
     <Compile Include="Assets\_Scripts\Objects\afterDialogue\UIafterDialogue.cs" />
     <Compile Include="Assets\_YK\_Scripts\FadeController.cs" />
