@@ -7450,6 +7450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PosterPuzzle
       objectReference: {fileID: 0}
+    - target: {fileID: 74361700876264862, guid: ba0d090b3e31a12498551b2f920bf926, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1442707741862123519, guid: ba0d090b3e31a12498551b2f920bf926, type: 3}
       propertyPath: blockedArea
       value: 
