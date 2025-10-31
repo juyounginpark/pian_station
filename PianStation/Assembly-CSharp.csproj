@@ -74,6 +74,7 @@
     <Compile Include="Assets\_YK\_Scripts\CameraShaking.cs" />
     <Compile Include="Assets\_Scripts\Objects\inter.cs" />
     <Compile Include="Assets\_Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\_ES\ES_Scripts\UIScreenShake.cs" />
     <Compile Include="Assets\_YK\_Scripts\PlayAnimation.cs" />
     <Compile Include="Assets\_Scripts\Player\Dialogue.cs" />
     <Compile Include="Assets\_Scripts\Player\InteractionManager.cs" />
@@ -95,7 +96,6 @@
     <Compile Include="Assets\_YK\_Scripts\TypeTextTMP.cs" />
     <Compile Include="Assets\_Scripts\Objects\invisiblePoint.cs" />
     <Compile Include="Assets\_Scripts\Objects\afterDialogue\UIafterDialogue.cs" />
-    <Compile Include="Assets\_ES\ES_Scripts\ScreenShake.cs" />
     <Compile Include="Assets\_YK\_Scripts\FadeController.cs" />
     <Compile Include="Assets\_Scripts\Objects\movePoint.cs" />
   </ItemGroup>
@@ -1313,16 +1313,16 @@
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
