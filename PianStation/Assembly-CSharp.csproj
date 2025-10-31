@@ -62,12 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_YK\_Scripts\BlinkLight.cs" />
+    <Compile Include="Assets\_ES\ES_Scripts\BlinkEffect.cs" />
     <Compile Include="Assets\_Scripts\Player\mapMove.cs" />
     <Compile Include="Assets\_ES\ES_Scripts\PosterPuzzleUI.cs" />
     <Compile Include="Assets\_ES\ES_Scripts\TapeButton.cs" />
     <Compile Include="Assets\_ES\ES_Scripts\TitleMenu.cs" />
     <Compile Include="Assets\_Scripts\Objects\IInteractable.cs" />
     <Compile Include="Assets\_YK\_Scripts\QuitGame.cs" />
+    <Compile Include="Assets\_ES\ES_Scripts\EffectManager.cs" />
     <Compile Include="Assets\_Scripts\Objects\train\strangeTrain.cs" />
     <Compile Include="Assets\_YK\_Scripts\CameraShaking.cs" />
     <Compile Include="Assets\_Scripts\Objects\inter.cs" />
@@ -93,6 +95,7 @@
     <Compile Include="Assets\_YK\_Scripts\TypeTextTMP.cs" />
     <Compile Include="Assets\_Scripts\Objects\invisiblePoint.cs" />
     <Compile Include="Assets\_Scripts\Objects\afterDialogue\UIafterDialogue.cs" />
+    <Compile Include="Assets\_ES\ES_Scripts\ScreenShake.cs" />
     <Compile Include="Assets\_YK\_Scripts\FadeController.cs" />
     <Compile Include="Assets\_Scripts\Objects\movePoint.cs" />
   </ItemGroup>
