@@ -131,16 +131,17 @@ public class GameManager : MonoBehaviour
         }
 
         // [수정] 5초 대기
-        Debug.Log("[GameManager] 게임 클리어! 5초 후 UI가 사라집니다...");
+        Debug.Log("[GameManager] 게임 클리어! 5초 후 게임이 종료됩니다...");
         yield return new WaitForSeconds(5f);
 
-        // [수정] UI 끄기 (재시작 대신)
-        if (gameClearPanel != null)
-            gameClearPanel.SetActive(false);
+        // [수정] 게임 끄기 (종료)
+        Debug.Log("[GameManager] 게임 종료!");
+        Application.Quit();
 
-        // 참고: 게임 클리어 후 몬스터가 다시 플레이어를 쫓지 않도록
-        // CreatureAI의 OnTriggerEnter2D에서 몬스터를 비활성화(gameObject.SetActive(false))
-        // 하는 로직을 유지하는 것이 좋습니다.
+        // 유니티 에디터에서 테스트할 때만 플레이 모드를 중지시킵니다.
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
     // --- 수정 끝 ---
 
