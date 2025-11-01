@@ -4,8 +4,8 @@ using TMPro;
 
 public class CloseDialogue : MonoBehaviour
 {
-    public GameObject dialoguePanel; // 대화창 패널
-    public Button closeButton; // Inspector에서 연결할 버튼
+    public GameObject dialoguePanel;
+    public Button closeButton;
 
     void Update()
     {

@@ -66,13 +66,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_YK\_Scripts\InteractableObjects\Poster.cs" />
+    <Compile Include="Assets\_ES\ES_Scripts\BlinkEffect.cs" />
+    <Compile Include="Assets\_YK\_Scripts\InteractableObjects\StrangeVendingMachine.cs" />
+    <Compile Include="Assets\_YK\_Scripts\InteractableObjects\VendingMachine.cs" />
     <Compile Include="Assets\_Scripts\Player\mapMove.cs" />
     <Compile Include="Assets\_YK\_Scripts\Intro\TypeTextTMP.cs" />
     <Compile Include="Assets\_ES\ES_Scripts\PosterPuzzleUI.cs" />
     <Compile Include="Assets\_ES\ES_Scripts\TapeButton.cs" />
+    <Compile Include="Assets\_ES\ES_Scripts\TitleMenu.cs" />
     <Compile Include="Assets\_YK\_Scripts\Intro\SceneChanger.cs" />
     <Compile Include="Assets\_Scripts\Objects\IInteractable.cs" />
     <Compile Include="Assets\_YK\_Scripts\Intro\BlinkLight.cs" />
+    <Compile Include="Assets\_ES\ES_Scripts\EffectManager.cs" />
     <Compile Include="Assets\Phone_20251012\Scripts\TogglePhone.cs" />
     <Compile Include="Assets\_YK\_Scripts\Intro\QuitGame.cs" />
     <Compile Include="Assets\_Scripts\Objects\train\strangeTrain.cs" />
@@ -82,9 +87,12 @@
     <Compile Include="Assets\_Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\_YK\_Scripts\Main\CloseDialogue.cs" />
     <Compile Include="Assets\_YK\_Scripts\Player\PlayerControllerYK.cs" />
+    <Compile Include="Assets\_ES\ES_Scripts\UIScreenShake.cs" />
     <Compile Include="Assets\_YK\_Scripts\Intro\ActiveAfterDelay.cs" />
+    <Compile Include="Assets\_YK\_Scripts\InteractableObjects\Memo.cs" />
     <Compile Include="Assets\_Scripts\Player\Dialogue.cs" />
     <Compile Include="Assets\_Scripts\Player\InteractionManager.cs" />
+    <Compile Include="Assets\_ES\ES_Scripts\Hover.cs" />
     <Compile Include="Assets\_Scripts\Objects\DialogueAction.cs" />
     <Compile Include="Assets\_YK\_Scripts\InteractableObjects\Battery.cs" />
     <Compile Include="Assets\_Scripts\Objects\afterDialogue\activeAfterDialogue.cs" />
@@ -97,6 +105,7 @@
     <Compile Include="Assets\_Scripts\Objects\Object1.cs" />
     <Compile Include="Assets\_Scripts\Objects\vendingMachine\sequential.cs" />
     <Compile Include="Assets\_YK\_Scripts\Main\HelpText.cs" />
+    <Compile Include="Assets\_YK\_Scripts\Intro\PanelFadeOut.cs" />
     <Compile Include="Assets\_Scripts\Objects\Object2.cs" />
     <Compile Include="Assets\_ES\ES_Scripts\PostController.cs" />
     <Compile Include="Assets\_Scripts\Player\camera.cs" />
@@ -105,6 +114,7 @@
     <Compile Include="Assets\HW\CHARACTER\Script\StudentMove.cs" />
     <Compile Include="Assets\_Scripts\Objects\invisiblePoint.cs" />
     <Compile Include="Assets\_Scripts\Objects\afterDialogue\UIafterDialogue.cs" />
+    <Compile Include="Assets\_YK\_Scripts\Main\MoveToPlayer.cs" />
     <Compile Include="Assets\_Scripts\Objects\movePoint.cs" />
     <Compile Include="Assets\_YK\_Scripts\Intro\PlayAnimations.cs" />
     <Compile Include="Assets\Phone_20251012\Scripts\PanelAnimation.cs" />

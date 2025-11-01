@@ -2,9 +2,9 @@
 using UnityEngine;
 public class Poster : MonoBehaviour, IInteractable
 {
-    public GameObject PosterCanvas;
+    public GameObject PosterDialogue;
     public void Interact()
     {
-        PosterCanvas.gameObject.SetActive(true);
+        PosterDialogue.gameObject.SetActive(true);
     }
 }

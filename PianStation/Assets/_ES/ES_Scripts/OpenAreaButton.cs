@@ -3,8 +3,9 @@ using UnityEngine.UI;
 
 public class OpenAreaButton : MonoBehaviour
 {
-    [Header("¸·Èù ±¸¿ª ¿ÀºêÁ§Æ®")]
-    public GameObject blockedArea; 
+    [Header("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®")]
+    public GameObject blockedArea;
+    public GameObject Dialogue;
     private Button button;
 
     private void Awake()
@@ -22,12 +23,13 @@ public class OpenAreaButton : MonoBehaviour
     {
         if (blockedArea == null)
         {
-            Debug.LogWarning("blockedArea°¡ ¿¬°áµÇÁö ¾Ê¾Ò½À´Ï´Ù!");
+            Dialogue.SetActive(true);
+            Debug.LogWarning("blockedAreaï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò½ï¿½ï¿½Ï´ï¿½!");
             return;
         }
 
         blockedArea.SetActive(false);
-        Debug.Log("¹öÆ° Å¬¸¯ ¡æ ¸·Èù ±¸¿ªÀÌ ¿­·È½À´Ï´Ù!");
+        Debug.Log("ï¿½ï¿½Æ° Å¬ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½È½ï¿½ï¿½Ï´ï¿½!");
 
         //gameObject.SetActive(false);
     }
