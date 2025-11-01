@@ -59,12 +59,13 @@
     <UnityVersion>6000.0.40f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Users\USER\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.3\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Users\0620f\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.1.3\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.40f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.40f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.40f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_YK\_Scripts\Creature\gamemanger.cs" />
     <Compile Include="Assets\_YK\_Scripts\InteractableObjects\Poster.cs" />
     <Compile Include="Assets\_ES\ES_Scripts\BlinkEffect.cs" />
     <Compile Include="Assets\_YK\_Scripts\InteractableObjects\StrangeVendingMachine.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Assets\_YK\_Scripts\Player\PlayerControllerYK.cs" />
     <Compile Include="Assets\_ES\ES_Scripts\UIScreenShake.cs" />
     <Compile Include="Assets\_YK\_Scripts\Intro\ActiveAfterDelay.cs" />
+    <Compile Include="Assets\_YK\_Scripts\Clock\Clock.cs" />
     <Compile Include="Assets\_YK\_Scripts\InteractableObjects\Memo.cs" />
     <Compile Include="Assets\_Scripts\Player\Dialogue.cs" />
     <Compile Include="Assets\_Scripts\Player\InteractionManager.cs" />
@@ -98,11 +100,13 @@
     <Compile Include="Assets\_Scripts\Objects\afterDialogue\activeAfterDialogue.cs" />
     <Compile Include="Assets\_ES\ES_Scripts\OpenAreaButton.cs" />
     <Compile Include="Assets\_Scripts\Objects\interactPoint.cs" />
+    <Compile Include="Assets\_YK\_Scripts\Creature\CreatureChase.cs" />
     <Compile Include="Assets\_Scripts\Objects\afterDialogue\hideAfterDialogue.cs" />
     <Compile Include="Assets\_Scripts\Objects\toggleSmartPhone.cs" />
     <Compile Include="Assets\_YK\_Scripts\InteractableObjects\Bench.cs" />
     <Compile Include="Assets\Phone_20251012\Scripts\PhoneCall.cs" />
     <Compile Include="Assets\_Scripts\Objects\Object1.cs" />
+    <Compile Include="Assets\_YK\_Scripts\Creature\CreatureLook.cs" />
     <Compile Include="Assets\_Scripts\Objects\vendingMachine\sequential.cs" />
     <Compile Include="Assets\_YK\_Scripts\Main\HelpText.cs" />
     <Compile Include="Assets\_YK\_Scripts\Intro\PanelFadeOut.cs" />

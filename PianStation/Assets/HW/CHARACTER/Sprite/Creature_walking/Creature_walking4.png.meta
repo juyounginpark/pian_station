@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Creature_walking4_0: -3811971006158482891
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

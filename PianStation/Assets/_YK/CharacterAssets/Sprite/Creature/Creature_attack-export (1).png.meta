@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 9b2941b6a92c7ec4da4d17f9aad7577e
+guid: c32a0371f0437614e99ca56dfe2f73bb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 470364905906731132
-    second: Creature_walking_0
+      213: 4641059619437694138
+    second: Creature_attack-export (1)_0
   - first:
-      213: -376811947290816746
-    second: Creature_walking_1
+      213: 1534622254342735161
+    second: Creature_attack-export (1)_1
   - first:
-      213: -3185784116667749633
-    second: Creature_walking_2
+      213: -6193875651621303907
+    second: Creature_attack-export (1)_2
   - first:
-      213: 8437899326878641407
-    second: Creature_walking_3
+      213: -199600384329474042
+    second: Creature_attack-export (1)_3
   - first:
-      213: 3985623847594660659
-    second: Creature_walking_4
+      213: -7408697233026767602
+    second: Creature_attack-export (1)_4
   - first:
-      213: -2445111514378689249
-    second: Creature_walking_5
+      213: -4725426485162318647
+    second: Creature_attack-export (1)_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Creature_walking_0
+      name: Creature_attack-export (1)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3
-        width: 65
-        height: 56
+        x: 4
+        y: 19
+        width: 322
+        height: 272
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c78716bc362178600800000000000000
-      internalID: 470364905906731132
+      spriteID: abc4efd622b586040800000000000000
+      internalID: 4641059619437694138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Creature_walking_1
+      name: Creature_attack-export (1)_1
       rect:
         serializedVersion: 2
-        x: 63
-        y: 4
-        width: 66
-        height: 53
+        x: 334
+        y: 24
+        width: 317
+        height: 267
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 61f8b96c78b45caf0800000000000000
-      internalID: -376811947290816746
+      spriteID: 935028e3fc21c4510800000000000000
+      internalID: 1534622254342735161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Creature_walking_2
+      name: Creature_attack-export (1)_2
       rect:
         serializedVersion: 2
-        x: 127
-        y: 3
-        width: 64
-        height: 57
+        x: 664
+        y: 24
+        width: 312
+        height: 267
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ffaefe29932d9c3d0800000000000000
-      internalID: -3185784116667749633
+      spriteID: d99cb2259eeea0aa0800000000000000
+      internalID: -6193875651621303907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Creature_walking_3
+      name: Creature_attack-export (1)_3
       rect:
         serializedVersion: 2
-        x: 191
-        y: 4
-        width: 64
-        height: 55
+        x: 989
+        y: 24
+        width: 312
+        height: 272
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ffceb1d5bb0791570800000000000000
-      internalID: 8437899326878641407
+      spriteID: 600a20b0280ea3df0800000000000000
+      internalID: -199600384329474042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Creature_walking_4
+      name: Creature_attack-export (1)_4
       rect:
         serializedVersion: 2
-        x: 255
-        y: 1
-        width: 64
-        height: 57
+        x: 1304
+        y: 24
+        width: 322
+        height: 267
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 333943cc5c7cf4730800000000000000
-      internalID: 3985623847594660659
+      spriteID: e0525099e150f2990800000000000000
+      internalID: -7408697233026767602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Creature_walking_5
+      name: Creature_attack-export (1)_5
       rect:
         serializedVersion: 2
-        x: 319
-        y: 3
-        width: 64
-        height: 57
+        x: 1624
+        y: 24
+        width: 322
+        height: 267
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,8 +240,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f15ad3d4808311ed0800000000000000
-      internalID: -2445111514378689249
+      spriteID: 9c46dabe5a9eb6eb0800000000000000
+      internalID: -4725426485162318647
       vertices: []
       indices: 
       edges: []
@@ -259,13 +259,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Creature_walking_0: 470364905906731132
-      Creature_walking_1: -376811947290816746
-      Creature_walking_2: -3185784116667749633
-      Creature_walking_3: 8437899326878641407
-      Creature_walking_4: 3985623847594660659
-      Creature_walking_5: -2445111514378689249
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
