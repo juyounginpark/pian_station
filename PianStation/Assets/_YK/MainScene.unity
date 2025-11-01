@@ -6688,9 +6688,9 @@ MonoBehaviour:
   maxChaseSpeed: 10
   erraticMovementFactor: 0.8
   trainChaseSpeed: 8
-  rushAttackDistance: 6
+  rushAttackDistance: 4
   rushAttackSpeed: 12
-  rushAttackAnimDuration: 0.5
+  rushAttackAnimDuration: 1
   attackSprite: {fileID: -4725426485162318647, guid: c32a0371f0437614e99ca56dfe2f73bb, type: 3}
   rushAttackCooldown: 5
   fakeRushDistance: 2
@@ -15518,7 +15518,7 @@ MonoBehaviour:
   playerName: Player
   equipKey: 51
   throwSpeed: 15
-  clockLifetime: 3
+  clockLifetime: -1
   equippedOffset: {x: 0.5, y: 0.5, z: 0}
   followSpeed: 10
 --- !u!212 &886537890
@@ -15564,7 +15564,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -7200951885001166057, guid: 94c42bfe09ffb724f8113b41219c3e6a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -26729,7 +26729,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 0000000037df0d76
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
