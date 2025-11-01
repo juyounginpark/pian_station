@@ -18,7 +18,7 @@ public class CreatureAI : MonoBehaviour
     public float detectionRange = 8f;
     public float loseInterestDistance = 12f;
     public float playerSpeedThreshold = 1.5f;
-    public float slowSpeedIgnore = 0.5f;
+    public float slowSpeedIgnore = 0.5f; 
 
     [Header("🏃 Chase Player Settings")]
     public float baseChaseSpeed = 3f;
@@ -65,7 +65,7 @@ public class CreatureAI : MonoBehaviour
 
     private enum State { Idle, Wander, ChasePlayer, ChaseTrain, RushAttack, FakeRushAttack, Hesitating, ChaseClock }
     private State currentState = State.Idle;
-    private Transform clockTarget = null;
+    private Transform clockTarget = null; 
 
     void Start()
     {
@@ -89,9 +89,19 @@ public class CreatureAI : MonoBehaviour
     {
         if (player == null) return;
 
+        if (clockTarget == null)
+        {
+            GameObject clockObj = GameObject.FindGameObjectWithTag("ThrownClock");
+            if (clockObj != null)
+            {
+                clockTarget = clockObj.transform;
+                SetState(State.ChaseClock); 
+            }
+        }
+
         UpdateTimers();
-        UpdatePlayerSpeed();
-        UpdateFacing();
+        UpdatePlayerSpeed(); 
+        UpdateFacing(); 
 
         switch (currentState)
         {
@@ -118,21 +128,44 @@ public class CreatureAI : MonoBehaviour
                 break;
         }
 
-        // --- 경계선(Boundary) 적용 ---
-        Vector3 finalPos = transform.position;
-        finalPos.x = Mathf.Clamp(finalPos.x, minX, maxX);
+        // --- [수정] 경계선(Boundary) 적용 ---
+        Vector3 finalPos = transform.position; // Handle...()에서 계산된 위치
+        finalPos.x = Mathf.Clamp(finalPos.x, minX, maxX); // X는 항상 제한
         
-        // 시계를 쫓는 중이 아닐 때만 Y좌표 제한
-        if (currentState != State.ChaseClock)
+        if (currentState == State.ChaseClock && clockTarget != null)
         {
-            finalPos.y = Mathf.Clamp(finalPos.y, minY, maxY);
+            ThrownClock thrownClock = clockTarget.GetComponent<ThrownClock>();
+            bool isClockDestLow = false;
+
+            if (thrownClock != null)
+            {
+                // 시계의 *최종 목적지*가 -2 이하인지 확인
+                if (thrownClock.GetFinalPosition().y <= -2f) 
+                {
+                    isClockDestLow = true;
+                }
+            }
+            
+            if (isClockDestLow)
+            {
+                // [핵심 수정]
+                // 시계 목적지가 낮으면, Y좌표가 -2.74f보다 내려가지 못하게 '강제'로 고정(Clamp)
+                // HandleChaseClock에서 Y를 -2.75로 설정했더라도, 여기서 -2.74로 덮어씁니다.
+                finalPos.y = Mathf.Max(finalPos.y, -2.74f);
+            }
+            else
+            {
+                // 시계 목적지가 낮지 않으면, 기존 Y 경계선(minY)을 따름
+                finalPos.y = Mathf.Clamp(finalPos.y, minY, maxY);
+            }
         }
         else
         {
-            // 시계를 쫓는 중일 때는 maxY만 적용
-            finalPos.y = Mathf.Clamp(finalPos.y, -100f, maxY);
+            // 시계를 쫓는 중이 아닐 때, 기존 Y 경계선(minY)을 따름
+            finalPos.y = Mathf.Clamp(finalPos.y, minY, maxY);
         }
         
+        // 최종 계산된 위치 적용
         transform.position = finalPos;
     }
 
@@ -140,7 +173,7 @@ public class CreatureAI : MonoBehaviour
     {
         currentState = newState;
         stateTimer = 0f;
-        isAttacking = false;
+        isAttacking = false; 
 
         switch (newState)
         {
@@ -168,12 +201,13 @@ public class CreatureAI : MonoBehaviour
             case State.Hesitating:
                 stateTimer = Random.Range(0.5f, 1.0f);
                 break;
+            case State.ChaseClock:
+                break;
         }
     }
 
     void HandleIdle()
     {
-        // 시계를 추적 중이면 다른 행동 하지 않음
         if (clockTarget != null)
         {
             SetState(State.ChaseClock);
@@ -196,7 +230,6 @@ public class CreatureAI : MonoBehaviour
 
     void HandleWander()
     {
-        // 시계를 추적 중이면 다른 행동 하지 않음
         if (clockTarget != null)
         {
             SetState(State.ChaseClock);
@@ -221,7 +254,6 @@ public class CreatureAI : MonoBehaviour
 
     void HandleChasePlayer()
     {
-        // 시계를 추적 중이면 플레이어 추적 중단
         if (clockTarget != null)
         {
             SetState(State.ChaseClock);
@@ -278,7 +310,6 @@ public class CreatureAI : MonoBehaviour
 
     void HandleHesitating()
     {
-        // 시계를 추적 중이면 망설임 중단
         if (clockTarget != null)
         {
             SetState(State.ChaseClock);
@@ -291,6 +322,7 @@ public class CreatureAI : MonoBehaviour
         }
     }
 
+    // [수정] 순간이동 로직 제거
     void HandleChaseClock()
     {
         if (clockTarget == null)
@@ -299,33 +331,33 @@ public class CreatureAI : MonoBehaviour
             return;
         }
 
-        // 시계 위치로 이동
-        float distance = Vector3.Distance(transform.position, clockTarget.position);
-        
-        if (distance > 0.2f)
+        ThrownClock thrownClock = clockTarget.GetComponent<ThrownClock>();
+        if (thrownClock == null)
         {
-            // 시계가 이동 중이면 따라가고, 멈춰있으면 최종 위치로 이동
-            ThrownClock thrownClock = clockTarget.GetComponent<ThrownClock>();
-            Vector3 targetPos = clockTarget.position;
-            
-            if (thrownClock != null && thrownClock.HasArrived())
-            {
-                // 시계가 최종 위치에 도착했으면 그 위치로
-                targetPos = clockTarget.position;
-            }
-            
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, trainChaseSpeed * Time.deltaTime);
+            SetState(State.Idle); // 시계가 파괴되었으면 Idle
+            return;
+        }
+
+        Vector3 finalClockPos = thrownClock.GetFinalPosition();
+        Vector3 targetMovementPos; 
+
+        if (thrownClock.HasArrived())
+        {
+            targetMovementPos = finalClockPos;
         }
         else
         {
-            // 시계 위치에 도착
-            transform.position = clockTarget.position;
+            targetMovementPos = clockTarget.position; // 아직 이동 중이면 현재 위치 추적
         }
+        
+        // [핵심 수정] 
+        // 텔레포트 로직(distanceToFinal < 0.2f)을 제거하고 '항상' MoveTowards를 사용합니다.
+        // 이렇게 하면 Update()의 Y좌표 Clamp 로직이 매 프레임 작동할 수 있습니다.
+        transform.position = Vector3.MoveTowards(transform.position, targetMovementPos, trainChaseSpeed * Time.deltaTime);
     }
 
     IEnumerator RushAttackSequence()
     {
-        // 시계가 있으면 돌진 중단하고 시계 추적
         if (clockTarget != null)
         {
             SetState(State.ChaseClock);
@@ -336,7 +368,6 @@ public class CreatureAI : MonoBehaviour
         float t = 0;
         while (t < 0.4f)
         {
-            // 돌진 중에도 시계 확인
             if (clockTarget != null)
             {
                 SetState(State.ChaseClock);
@@ -357,7 +388,6 @@ public class CreatureAI : MonoBehaviour
 
     IEnumerator FakeRushSequence()
     {
-        // 시계가 있으면 가짜 돌진 중단하고 시계 추적
         if (clockTarget != null)
         {
             SetState(State.ChaseClock);
@@ -370,7 +400,6 @@ public class CreatureAI : MonoBehaviour
 
         while (t < 0.3f)
         {
-            // 돌진 중에도 시계 확인
             if (clockTarget != null)
             {
                 SetState(State.ChaseClock);
@@ -389,22 +418,49 @@ public class CreatureAI : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // 플레이어와 충돌 시 게임 오버
-        if (other.gameObject.name == playerName)
+        // 1순위: Game Clear (시계 쫓다가 기차에 닿음)
+        if (currentState == State.ChaseClock && other.gameObject.name == trainName)
         {
             GameManager gameManager = FindObjectOfType<GameManager>();
             if (gameManager != null)
             {
-                gameManager.GameOver();
+                gameManager.GameClear(); 
             }
             else
             {
                 Debug.LogError("[CreatureAI] GameManager를 찾을 수 없습니다!");
             }
+            
+            if (clockTarget != null) Destroy(clockTarget.gameObject);
+            
+            gameObject.SetActive(false); 
+            return; 
+        }
+
+        // 2순위: 플레이어와 충돌
+        if (other.gameObject.name == playerName)
+        {
+            if (currentState == State.RushAttack)
+            {
+                if (playerSpeed < slowSpeedIgnore)
+                {
+                    Debug.Log("[CreatureAI] 돌진 공격! 하지만 플레이어가 멈춰있어 회피!");
+                }
+                else
+                {
+                    Debug.Log("[CreatureAI] 돌진 공격! 움직이는 플레이어 적중!");
+                    TriggerGameOver();
+                }
+            }
+            else
+            {
+                Debug.Log($"[CreatureAI] {currentState} 상태에서 플레이어와 충돌!");
+                TriggerGameOver();
+            }
             return;
         }
 
-        // 기차와 충돌 시
+        // 3순위: 기차와 충돌 (시계 추적 중이 아닐 때)
         if (other.gameObject.name == trainName)
         {
             train = other.transform;
@@ -413,9 +469,21 @@ public class CreatureAI : MonoBehaviour
         }
     }
 
+    void TriggerGameOver()
+    {
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        if (gameManager != null)
+        {
+            gameManager.GameOver();
+        }
+        else
+        {
+            Debug.LogError("[CreatureAI] GameManager를 찾을 수 없습니다!");
+        }
+    }
+    
     void OnTriggerExit2D(Collider2D other)
     {
-        // 5초간 추적해야 하므로 Exit에서는 아무것도 하지 않음
     }
 
     void UpdateTimers()
@@ -423,7 +491,6 @@ public class CreatureAI : MonoBehaviour
         if (rushAttackTimer > 0) rushAttackTimer -= Time.deltaTime;
         if (fakeRushTimer > 0) fakeRushTimer -= Time.deltaTime;
         if (stateTimer > 0) stateTimer -= Time.deltaTime;
-        // trainChaseTimer는 HandleChaseTrain에서 직접 관리
     }
 
     void UpdatePlayerSpeed()
@@ -438,7 +505,6 @@ public class CreatureAI : MonoBehaviour
         Vector2 randomOffset = Random.insideUnitCircle * wanderRange;
         wanderTarget = homePosition + new Vector3(randomOffset.x, randomOffset.y, 0);
 
-        // 경계 내에서만 wanderTarget 설정 (선택적: homePosition이 경계 밖이면 문제될 수 있음)
         wanderTarget.x = Mathf.Clamp(wanderTarget.x, minX, maxX);
         wanderTarget.y = Mathf.Clamp(wanderTarget.y, minY, maxY);
     }
@@ -446,28 +512,34 @@ public class CreatureAI : MonoBehaviour
     void UpdateFacing()
     {
         if (isAttacking && currentState != State.ChaseTrain) return; 
-        if (player == null) return;
 
-        Vector3 targetPos = player.position;
-        bool faceRight = false;
+        Vector3 targetPos = Vector3.zero;
+        bool hasTarget = false;
 
-        if (currentState == State.ChaseTrain && train != null)
+        if (currentState == State.ChaseClock && clockTarget != null)
+        {
+            targetPos = clockTarget.position;
+            hasTarget = true;
+        }
+        else if (currentState == State.ChaseTrain && train != null)
         {
             targetPos = train.position;
+            hasTarget = true;
+        }
+        else if (player != null)
+        {
+            targetPos = player.position;
+            hasTarget = true;
         }
 
-        if (transform.position.x < targetPos.x)
+        if (hasTarget)
         {
-            faceRight = true;
-        }
-        else
-        {
-            faceRight = false;
-        }
+            bool faceRight = (transform.position.x < targetPos.x);
 
-        if (faceRight)
-            transform.localScale = new Vector3(-Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
-        else
-            transform.localScale = new Vector3(Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
+            if (faceRight)
+                transform.localScale = new Vector3(-Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
+            else
+                transform.localScale = new Vector3(Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
+        }
     }
 }
